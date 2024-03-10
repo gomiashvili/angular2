@@ -1,5 +1,5 @@
 <h2>Version {{ major }}.{{ minor }}</h2>
 <p>Change Log:</p>
 <ul>
-    <li>Initial Value of major set to 1. Initial Value of minor set to 23.</li>
+    <li *ngFor="let i of logData">{{i.log}}</li>
 </ul>

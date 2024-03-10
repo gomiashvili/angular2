@@ -10,12 +10,6 @@ export class Parent1Component implements OnInit {
   minor: number = 23;
 
 
-  logData = [{
-    major: 1,
-    minor: 23
-  }
-  ]
-
   minorUpdate() {
     this.minor += 1;
   }
