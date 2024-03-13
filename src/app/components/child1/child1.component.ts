@@ -28,14 +28,14 @@ export class Child1Component implements OnInit, OnChanges {
     }
 
     if (majorChanged) {
-
-      this.logData.push({
-        log: `major changed from ${majorChanged.previousValue} to ${majorChanged.currentValue}, minor changed from
+      if (majorChanged.previousValue) {
+        this.logData.push({
+          log: `major changed from ${majorChanged.previousValue} to ${majorChanged.currentValue}, minor changed from
           ${minorChanged != undefined && minorChanged.previousValue != undefined ? minorChanged.previousValue : 0} to 
           ${minorChanged != undefined && minorChanged.currentValue != undefined ? minorChanged.currentValue : 0}`
-      })
+        })
+      }
     }
-
   }
 
 }
